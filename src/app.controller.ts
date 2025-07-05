@@ -15,7 +15,7 @@ export class AppController {
   }
 
   @Get('/test')
-  getConfig(): string {
-    return this.configService.get('DB') || '-';
+  test(): string {
+    return this.configService.get('DB_URL') || '-';
   }
 }
