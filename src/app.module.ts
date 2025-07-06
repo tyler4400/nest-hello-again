@@ -2,8 +2,9 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
+import { LogModule } from './log/log.module';
 import * as process from 'node:process';
-import * as Joi from 'joi';
+import * as Joi from 'joi'; // 使用default import会报错
 // import * as dotenv from 'dotenv';
 
 @Module({
@@ -24,6 +25,7 @@ import * as Joi from 'joi';
         DB_HOST: Joi.string().ip(),
       }),
     }),
+    LogModule,
   ],
   controllers: [AppController],
   providers: [AppService],
