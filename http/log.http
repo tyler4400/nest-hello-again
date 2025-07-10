@@ -1,0 +1,21 @@
+
+### 测试nest自带的日志
+GET {{host}}:{{port}}/log
+#Content-Type: application/json
+#x-csrf-token: lfjyIgSUOmu8vvo2yvnERbNP
+#
+#{
+#  "name": "{{name}}"
+#}
+
+### 测试 pino 日志
+GET {{host}}:{{port}}/log/pino
+
+### 测试 Winston 日志
+GET {{host}}:{{port}}/log/winston
+
+### 测试 Winston 错误处理
+GET {{host}}:{{port}}/log/winston/error
+
+### 对比三个日志处理功能
+GET {{host}}:{{port}}/log/compare
