@@ -14,7 +14,7 @@ export class LogController {
     @Inject(WINSTON_MODULE_PROVIDER)
     private readonly winstonLogger: WinstonLogger,
   ) {
-    this.nestLogger.log('日志模块集成成功');
+    this.pinoLogger.info('日志模块集成成功');
   }
 
   @Get('/')

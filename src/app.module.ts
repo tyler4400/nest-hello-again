@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { LogModule } from './log/log.module';
+import { ExceptionModule } from './exception/exception.module';
 import * as process from 'node:process';
 import * as Joi from 'joi'; // 使用default import会报错
 // import * as dotenv from 'dotenv';
@@ -26,6 +27,7 @@ import * as Joi from 'joi'; // 使用default import会报错
       }),
     }),
     LogModule,
+    ExceptionModule,
   ],
   controllers: [AppController],
   providers: [AppService],

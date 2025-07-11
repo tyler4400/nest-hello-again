@@ -1,0 +1,6 @@
+
+### 测试抛出标准 HTTP 异常
+POST {{host}}:{{port}}/exception
+
+### 使用方法级异常过滤器
+POST {{host}}:{{port}}/exception/filter
